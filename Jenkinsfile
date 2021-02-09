@@ -1,21 +1,10 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent { docker { image 'openjdk:8' } }
     stages {
         stage('build') {
             steps {
-                withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn clean compile'
-                }
+                sh "java -version"
             }
         }
-
-        stage('test') {
-            steps {
-                withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn test'
-                }
-            }
-        }
-        
     }
 }
