@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Add git') {
             steps {
-                sh 'sudo apt install git-all'
+                sh 'apt install git-all'
             }
         }
 
