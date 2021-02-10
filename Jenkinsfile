@@ -11,8 +11,7 @@ pipeline {
                 sh '''
                     apk update;
                     apk add --no-cache git;
-                    apk add --no-cache openssh;
-                    git -v;
+                    git --version;
                 '''
                 sh 'mvn -B -DskipTests clean package'
             }
