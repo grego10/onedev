@@ -1,16 +1,10 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine'
+            image 'git-maven:3-alpine'
         }
     }
     stages {
-        stage('Add git') {
-            steps {
-                sh 'apt install git-all'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
