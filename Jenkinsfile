@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'maven:3-alpine'
         }
-        seteps {
+        steps {
             sh 'apk update && apk upgrade && apk add --no-cache bash git openssh'
         }
     }
