@@ -4,7 +4,7 @@ pipeline {
             image 'maven:3-alpine'
         }
         steps {
-            sh 'apk update && apk upgrade && apk add --no-cache bash git openssh'
+            sh 'apk update && apk upgrade && \ apk add git'
         }
     }
     stages {
