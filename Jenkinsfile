@@ -1,7 +1,10 @@
 pipeline {
     agent {
         docker {
-            image 'git-maven:3-alpine'
+            image 'maven:3-alpine'
+        }
+        seteps {
+            sh 'apk update && apk upgrade && apk add --no-cache bash git openssh'
         }
     }
     stages {
