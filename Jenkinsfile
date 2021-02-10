@@ -5,6 +5,12 @@ pipeline {
         }
     }
     stages {
+        stage('Add git') {
+            steps {
+                sh 'sudo apt install git-all'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
