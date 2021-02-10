@@ -8,8 +8,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'apk update && apk upgrade && apk add git'
-            }
-            steps {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
