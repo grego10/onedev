@@ -19,5 +19,6 @@
 		<module>server-plugin-archetype</module>
 		<module>server-plugin-executor-docker</module>
 	    	<module>server-plugin-buildspec-node</module>
+	    	<module>server-plugin-report-jest</module>
 	</modules>
 </project>
